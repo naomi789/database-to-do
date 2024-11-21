@@ -1,0 +1,17 @@
+<html>
+    <head><title>Working with databases</title></head>
+    <body>
+      <h1>Adding things to my list</h1>
+      <form action="/" method="post">
+       <label for="todo_input">TODO</label>
+       <input type="text" name="todotext" id="todo_input">
+       <input type="submit" value="Add">
+      </form>
+      <h1>Listing items in my to-do list</h1>
+      <ul>
+        {% for todo in todolist %}
+           <li>{{todo.todotext}}</li>
+        {% endfor %}
+      </ul>
+    </body>
+</html>
